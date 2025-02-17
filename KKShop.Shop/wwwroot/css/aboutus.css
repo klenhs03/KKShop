@@ -1,0 +1,34 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Heading Bar */
+.heading-bar {
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 20px; /* Space below the heading */
+}
+    /* Paragraph Styles */
+    .content-page p {
+        font-size: 16px; /* Font size for paragraphs */
+        line-height: 1.6; /* Line height for better readability */
+        color: #555; /* Slightly lighter text color */
+        margin-bottom: 15px; /* Space below paragraphs */
+        text-align: left; /* Align paragraphs to the left */
+    }
+
+    .content-page li {
+        margin-bottom: 20px; /* Space between list items */
+        text-align: left;
+    }
+
+    .content-page span {
+        font-weight: bold; /* Bold text for list item titles */
+        font-size: 16px; /* Font size for list item titles */
+        color: black; /* Blue color for titles */
+    }
+
+    .content-page p {
+        margin-top: 5px; /* Space above paragraph in list items */
+    }
+

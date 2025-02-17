@@ -1,0 +1,62 @@
+﻿@using KKShop.Shop.AppCodes
+<header>
+    <nav>
+        <div class="img-nav">
+            <img src="~/images/logo.png" />
+        </div>
+        <div class="content-nav">
+            <ul>
+                <li><a href="~/Home">Trang Chủ</a></li>
+                <li><a href="~/Product">Sản Phẩm</a></li>
+                <li><a href="~/Contact">Liên Hệ</a></li>
+                <li><a href="~/AboutUs">Giới Thiệu</a></li>
+            </ul>
+        </div>
+        <div class="bi bi-cart">
+            <a href="~/Product/Create">Giỏ hàng</a>
+        </div>
+
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                @{
+                    var userData = User.GetUserData();
+                    if (userData != null)
+                    {
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">@userData.DisplayName</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+
+                                    <p>
+                                        @userData.DisplayName
+                                    </p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="~/Account/ChangePassword" class="btn btn-default btn-flat">Đổi mật khẩu</a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <a href="~/Account/Information" class="btn btn-default btn-flat">Thông tin</a>
+                                    </div>
+                                    <div class="pull-left">
+                                        <a href="~/Account/Logout" class="btn btn-default btn-flat">Thoát</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <div class="login">
+                            <a href="~/Account/Login">Đăng nhập</a>
+                        </div>
+                    }
+                }
+            </ul>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,52 @@
+﻿@model KKShop.DomainModels.Customer
+@{
+    ViewBag.Title = "Xóa khách hàng";
+}
+
+<div class="box box-danger">
+    <div class="box-body">
+        <form action="~/Customer/Delete/@Model.CustomerID" method="post">
+            <div class="form-group">
+                <label>Tên khách hàng</label>
+                <p class="form-control-static">@Model.CustomerName</p>
+            </div>
+            <div class="form-group">
+                <label>Tên giao dịch</label>
+                <p class="form-control-static">@Model.ContactName</p>
+            </div>
+            <div class="form-group">
+                <label>Điện thoại</label>
+                <p class="form-control-static">@Model.Phone</p>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <p class="form-control-static">@Model.Email</p>
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ</label>
+                <p class="form-control-static">@Model.Address</p>
+            </div>
+            <div class="form-group">
+                <label>Tỉnh thành</label>
+                <p class="form-control-static">@Model.Province</p>
+            </div>
+            <div class="form-group">
+                <label>Trạng thái</label>
+                <p class="form-control-static">
+                    @(Model.IsLocked ? "Tài khoản đang bị khóa" : "Tài khoản đang hoạt động")
+                </p>
+            </div>
+
+            <div class="form-group text-right">
+                @if (!KKShop.BusinessLayers.CommonDataService.InUsedCustomer(Model.CustomerID))
+                {
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-floppy-o"> Xóa dữ liệu</i>
+                    </button>
+                }
+                <a href="~/Category" class="btn btn-default">Quay lại </a>
+            </div>
+        </form>
+
+    </div>
+</div>

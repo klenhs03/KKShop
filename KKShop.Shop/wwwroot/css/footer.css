@@ -1,0 +1,46 @@
+﻿.footer {
+    background-color: #f0f8ff; /* Blue background color */
+    color: #337ab7;
+    padding: 40px 0; /* Padding for top and bottom */
+}
+
+    .footer h5 {
+        font-size: 1.25rem; /* Font size for headings */
+        margin-bottom: 20px; /* Space below headings */
+        font-weight: bold; /* Bold headings */
+    }
+
+    .footer p {
+        margin-bottom: 10px; /* Space below paragraphs */
+    }
+
+    .footer a {
+        color: #337ab7; 
+        text-decoration: none; /* Remove underline from links */
+    }
+
+        .footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #337ab7;
+        }
+
+    .footer .list-unstyled {
+        padding-left: 0; /* Remove default padding */
+        list-style: none; /* Remove bullet points */
+        color: #337ab7;
+    }
+
+    .footer li{
+        margin-bottom: 10px; 
+    }
+
+    .footer .text-center {
+        margin-top: 20px; /* Space above the copyright text */
+    }
+
+        .footer .text-center p {
+            margin: 0; /* Remove default margin */
+        }
+
+
+

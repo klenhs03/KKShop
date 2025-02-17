@@ -1,0 +1,148 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.sectionTitleTab {
+    margin-bottom: 20px; /* Space below the section */
+}
+
+
+    .sectionTitleTab a.tp_title {
+        text-decoration: none; /* Remove underline from link */
+        color: #337ab7;
+    }
+
+/* Optional: clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Clearfix for the product list */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Product List Styles */
+.content-product-list {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual Product Styles */
+.product-resize {
+    width: 200px;
+    height: 350px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: calc(25% - 20px); /* 4 products per row */
+}
+
+    .product-resize:hover {
+        transform: scale(1.05);
+    }
+
+/* Product Image Styles */
+.product-img {
+    text-align: center;
+}
+
+    .product-img img {
+        max-width: 100%;
+        height: 150px;
+        width: 190px;
+        border-radius: 5px;
+    }
+
+/* Product Info Styles */
+.product-info {
+    margin-top: 10px;
+}
+
+.pro-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.description{
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.pro-price {
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c; /* Price color */
+}
+
+.pro-price-del {
+    text-decoration: line-through;
+    color: #999; /* Old price color */
+}
+
+/* Button Styles */
+.actionLoop {
+    background-color: #3498db; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 10px 53px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-flex; /* Align icon and text */
+    align-items: center; /* Center icon and text vertically */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+    .actionLoop i {
+        margin-right: 5px; /* Space between icon and text */
+    }
+
+    /* Hover Effect */
+    .actionLoop:hover {
+        background-color: #3498db; /* Darker blue on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+
+    /* Focus Effect */
+    .actionLoop:focus {
+        outline: none; /* Remove default outline */
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add a focus ring */
+    }
+
+/* Pagination Styles */
+.pagination-theme {
+    margin-top: 20px;
+}
+
+.paginator {
+    display: inline-block;
+}
+
+.labelPages {
+    margin-right: 10px;
+}
+
+.titlePages {
+    font-weight: bold;
+}
+
+

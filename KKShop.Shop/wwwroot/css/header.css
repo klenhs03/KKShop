@@ -1,0 +1,187 @@
+﻿/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.img-nav img {
+    height: 50px; /* Set a height for the logo */
+}
+
+/* Navigation Content Styles */
+.content-nav {
+    display: flex;
+    align-items: center;
+}
+
+    .content-nav ul {
+        list-style: none;
+        display: flex;
+        margin-right: 20px; /* Space between menu and search */
+    }
+
+        .content-nav ul li {
+            margin: 0 15px; /* Space between menu items */
+        }
+
+            .content-nav ul li a {
+                text-decoration: none;
+                color: #337ab7; /* Blue text color */
+                font-weight: bold;
+            }
+
+
+.bi bi-cart a {
+    color: #337ab7; /* Blue text color */
+    font-weight: bold;
+    text-decoration: none;
+}
+.login a {
+    color: #337ab7; /* Blue text color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-nav ul {
+        flex-direction: column; /* Stack menu items on smaller screens */
+    }
+
+        .content-nav ul li {
+            margin: 5px 0; /* Space between stacked items */
+        }
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f0f8ff; /* Primary blue color for the navbar */
+    padding: 10px 20px; /* Padding around the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+
+/* Navbar Custom Menu */
+.navbar-custom-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* User Menu Styles */
+.navbar-nav {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal layout */
+}
+
+.user-menu {
+    position: relative; /* Position for dropdown */
+}
+
+    .user-menu a {
+        color: #337ab7; /* White text color for user menu */
+        text-decoration: none; /* Remove underline */
+        display: flex; /* Flexbox for alignment */
+        align-items: center; /* Center items vertically */
+    }
+
+.user-image {
+    border-radius: 50%; /* Circular user image */
+    width: 30px; /* Set width for user image */
+    height: 30px; /* Set height for user image */
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    position: absolute; /* Position dropdown relative to user menu */
+    background-color: white; /* White background for dropdown */
+    border: 1px solid #f0f8ff; /* Blue border for dropdown */
+    min-width: 200px; /* Minimum width for dropdown */
+    z-index: 1000; /* Ensure dropdown is on top */
+    display: none; /* Hidden by default */
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+}
+
+/* User Header Styles */
+.user-header {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Padding for user header */
+    background-color: #f0f8ff; /* Blue background for user header */
+    color: #337ab7; /* White text color */
+}
+
+    .user-header img {
+        border-radius: 50%; /* Circular user image */
+        width: 60px; /* Set width for user image */
+        height: 60px; /* Set height for user image */
+        margin-right: 10px; /* Space between image and text */
+    }
+
+/* User Footer Styles */
+.user-footer {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    padding: 10px; /* Padding for footer */
+}
+
+    .user-footer .btn {
+        background-color: #f0f8ff; /* Blue background for buttons */
+        color: #337ab7; /* White text color */
+        border: none; /* No border */
+        padding: 5px 10px; /* Padding for buttons */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+    }
+
+        .user-footer .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .navbar-custom-menu {
+        margin-top: 10px; /* Space above custom menu */
+    }
+}

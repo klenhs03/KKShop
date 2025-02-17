@@ -1,0 +1,95 @@
+﻿/* General body styling */
+body.hold-transition.login-page {
+    background: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centering the login box */
+.login-box {
+    width: 360px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Login logo */
+.login-logo a {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Login box body */
+.login-box-body {
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-box-msg {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Form styling */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+    .form-group .glyphicon {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        color: #999;
+    }
+
+/* Button styling */
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+    .btn-primary:hover {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+/* Validation error message */
+.validation-summary-errors {
+    color: #f00;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+    .login-box {
+        width: 90%;
+    }
+}
+
+

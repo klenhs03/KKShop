@@ -1,0 +1,84 @@
+﻿@*@model KK.Shop.Models.ProductSearchResult
+@{
+    Layout = null;
+}
+
+
+<p style="margin:10px 0 10px 0">
+    Có <strong>@Model.RowCount</strong> mặt hàng trong tổng số <strong>@Model.PageCount</strong> trang
+</p>
+
+<div class="container-fluid">
+    <div class="sectionTitleTab clearfix">
+        <h2>
+            <a class="tp_title">Sản phẩm</a>
+        </h2>
+    </div>
+
+    <div class="clearfix filter-here">
+
+        <div class=" content-product-list product-list filter clearfix fixBox">
+            @foreach (var item in Model.Data)
+            {
+                <form class="AddToCart"
+                      action="~/Product/AddToCart" method="post">
+                    <input type="hidden" name="ProductID" value="@item.ProductID" />
+                    <input type="hidden" name="ProductName" value="@item.ProductName" />
+                    <input type="hidden" name="Photo" value="@item.Photo" />
+                    <input type="hidden" name="Price" value="@item.Price" />
+
+                    <div class="product-resize col-md-3 col-sm-3 col-xs-6 pro-loop">
+                        <div class="product-block" data-anmation="1">
+                            <div class="product-img image-resize">
+                                <a>
+                                    <picture>
+                                        <img class="img-loop lazyautosizes lazyloaded" data-sizes="auto" src="~/images/@(item.Photo != "" ? item.Photo : "nophoto.jpg")" sizes="151px">
+                                    </picture>
+                                </a>
+                            </div>
+
+                            <div class="product-info">
+                                <div class="product-detail clearfix">
+
+                                    <div class="box-pro-detail">
+
+                                        <h3 class="pro-name">
+                                            <a class="tp_product_name">
+                                                @item.ProductName
+                                            </a>
+                                        </h3>
+                                        <div class="box-pro-prices-seccond">
+
+                                            <p class="pro-price highlight tp_product_price">
+                                                @item.Price
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="actionLoop visible-lg">
+                                <i class="fa fa-shopping-cart"></i>Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    <ul class="pagination">
+        @for (int p = 1; p <= Model.PageCount; p++)
+        {
+            if (p == Model.Page)
+            {
+                <li class="active"><a href="#">@p</a></li>
+            }
+            else
+            {
+                <li><a href="javascript:;" onclick="doSearch(@p)">@p</a></li>
+            }
+        }
+    </ul>
+</div>*@
